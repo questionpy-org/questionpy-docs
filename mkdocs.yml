@@ -1,0 +1,26 @@
+site_name: QuestionPy
+site_url: https://example.com
+
+plugins:
+  - awesome-pages
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths:
+            [questionpy-server, questionpy-sdk, questionpy-common]
+          options:
+            show_root_heading: true
+            docstring_style: sphinx
+
+theme:
+#  name: readthedocs
+  name: material
+
+nav:
+  - Home: index.md
+  - ...
+  - About:
+      - about/license.md
+      - about/roadmap.md

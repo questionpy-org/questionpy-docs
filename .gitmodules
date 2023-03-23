@@ -1,0 +1,9 @@
+[submodule "questionpy-server"]
+	path = questionpy-server
+	url = https://github.com/questionpy-org/questionpy-server
+[submodule "questionpy-sdk"]
+	path = questionpy-sdk
+	url = https://github.com/questionpy-org/questionpy-sdk
+[submodule "questionpy-common"]
+	path = questionpy-common
+	url = https://github.com/questionpy-org/questionpy-common
