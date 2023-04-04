@@ -15,7 +15,7 @@ plugins:
             [questionpy-server, questionpy-sdk, questionpy-common]
           options:
             show_root_heading: true
-            docstring_style: sphinx
+            docstring_style: google
 
 theme:
 #  name: readthedocs
