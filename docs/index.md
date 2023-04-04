@@ -13,9 +13,9 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 ## Project layout
 
-    mkdocs.yml      # The configuration file.
+    mkdocs.yml                  # The configuration file.
     docs/
-        index.md    # The documentation homepage.
-        reference/  # Folder containing code documentation
-        img/        # Logo, favicon, etc.
-        ...         # Other markdown pages, images and other files.
+        index.md                # The documentation homepage.
+        develop/*/reference/    # Folder containing code documentation
+        img/                    # Logo, favicon, etc.
+        ...                     # Other markdown pages, images and other files.
