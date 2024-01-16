@@ -1,7 +1,7 @@
 site_name: QuestionPy
 site_url: https://example.com
 repo_url: https://github.com/questionpy-org/
-repo_name: questionpy-org/
+repo_name: questionpy-org
 
 
 plugins:
@@ -29,6 +29,11 @@ theme:
 
 nav:
   - Home: index.md
+  - Getting Started:
+      - getting_started/index.md
+      - getting_started/installation.md
+      - getting_started/create_qtype.md
+      - getting_started/faq.md
   - ...
   - About:
       - about/index.md
