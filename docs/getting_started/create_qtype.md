@@ -38,7 +38,7 @@ description = static_text(
 
 This will create a non-editable text in your options form.
 
-## Run you question type locally
+## Run your question type locally
 
 To test your newly created question type, you have to package your project into a `.qpy` file. 
 

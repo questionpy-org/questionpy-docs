@@ -18,7 +18,7 @@ at the TU Berlin innoCampus.</p>
 
 ## Project description
 
-*translated from [original project descritpion in german](https://www.tu.berlin/innocampus/projekte/questionpy)*
+*translated from [original project description in german](https://www.tu.berlin/innocampus/projekte/questionpy)*
 
 <p style="text-align:justify">In e-assessments, students should be confronted with more competence-oriented and, if 
 necessary, interactive questions in which not only solutions are entered, but also ways of solving the problem are 
@@ -31,7 +31,7 @@ programming language. The question types will contain the logic to generate the 
 take the assessment, create the sample solution, generate hints/tips if necessary, and output a feedback text. 
 Instructors should be able to develop and use their own subject-specific question type without the mandatory 
 involvement of LMS administrators, who no longer need to install and maintain software for each instructor. There will 
-be a support offer for all subject areas of the TU Berlin, according to whose requirements subject-related question 
+be a support offer for all departments of the TU Berlin, according to whose requirements subject-related question 
 types will be programmed.</p>
 
 <p style="text-align:justify">The created question type consists of the Python source code, metadata, all dependencies 

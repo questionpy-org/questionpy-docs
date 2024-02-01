@@ -26,5 +26,5 @@ Question types are programmable in python and can include additional dependencie
 
 If you want to provide instructors and students with a wide range of question types but don't want 
 the overhead of managing that many LMS plugins, QuestionPy offers you the solution. 
-With a single plugin, you can fulfill your users need for a divers quiz repertoire. 
+With a single plugin, you can fulfill your users need for a diverse quiz repertoire. 
 The question code is executed in a secured environment to minimize security risks.

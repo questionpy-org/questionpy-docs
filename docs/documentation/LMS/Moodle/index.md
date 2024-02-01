@@ -7,9 +7,24 @@ The QuestionPy Moodle plugin
 
 [//]: # (TODO: update the moodle docs link if the compatibility changes) 
 
-For a general guide on how to install a _Moodle_ Plugin, you can look up the documentation under:
+For a general guide on how to install a Moodle Plugin, you can look up the documentation under:
 [Installing plugins - MoodleDocs](https://docs.moodle.org/403/en/Installing_plugins)
 
+### Installing manually at the server
+
+To install the QuestionPy Moodle Plugin, first navigate to the question type folder of Moodle.
+
+```shell
+cd /path/to/moodle/question/type/ 
+```
+
+You can then clone the GitHub repository.
+
+```shell
+git clone https://github.com/questionpy-org/moodle-qtype_questionpy.git questionpy
+```
+
+For more information, see [Installing manually at the server - MoodleDocs](https://docs.moodle.org/403/en/Installing_plugins#Installing_manually_at_the_server)
 
 ## Customization 
 
