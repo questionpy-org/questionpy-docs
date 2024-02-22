@@ -13,29 +13,41 @@ A list of compatible versions can be found [here](faq.md#what-python-version-can
 To create your own question type, QuestionPy provides a Software Development Kit (SDK).
 
 
+#### 1. Python and pip
+Make sure that the Python interpreter can load QuestionPy’s code.
+The most convenient way to do this is to use a virtual environment and [pip](https://pip.pypa.io/en/stable/).
 
-[//]: # (Sadly the combination of an enumerated list and code doesn't really work with mkdocs.)
+If you need additional information about creating virtual environments see: 
+[Creation of virtual environments](https://docs.python.org/3/library/venv.html#creating-virtual-environments)
 
-<ol>
-    <li><p>Make sure that the Python interpreter can load QuestionPy’s code.
-      The most convenient way to do this is to use a virtual environment and <a href="https://pip.pypa.io/en/stable/">pip</a>.</p>
-      <p>If you need additional information about creating virtual environments see: 
-            <a href="https://docs.python.org/3/library/venv.html#creating-virtual-environments">Creation of virtual environments</a></p>
-   </li>
-   <li>After creating and activating your virtual environment, you can install the <i>questionpy-sdk</i> code with:
-      <br>
-      <div style="margin-top:1em;">
-         <code style="padding: 1em">pip install git+https://github.com/questionpy-org/questionpy-sdk.git</code>
-      </div>
-      <br>   
-   </li>
-   <li>You can verify that <i>questionpy-sdk</i> was successfully installed by running:
-      <br>
-      <div style="margin-top:1em;">
-         <code style="padding: 1em">questionpy-sdk -h</code>
-      </div>
-      <br>   
-      This should display the help section.
-   </li>
-</ol>
-You are now ready to continue with [Create a QuestionType](create_qtype.md).
+To confirm the virtual environment is activated, check the location of your Python interpreter:
+
+##### Unix/macOS
+```shell
+which python
+```
+
+##### Windows
+```shell
+where python
+```
+
+While the virtual environment is active, the above command will output a filepath that includes the `.venv` directory
+
+#### 2. Install SDK from GitHub
+
+After creating and activating your virtual environment, you can install the _questionpy-sdk_ code with:
+```shell
+pip install git+https://github.com/questionpy-org/questionpy-sdk.git
+```
+
+#### 3. Verify Installation
+
+You can verify that _questionpy-sdk_ was successfully installed by running:
+```shell
+questionpy-sdk -h
+```
+
+This should display the help section.
+
+You are now ready to continue with the next step: [Create a QuestionType](create_qtype.md).
