@@ -1,6 +1,4 @@
 
-# Develop
+# Reference
 
 ## Overview of the QuestionPy Modules
-
-## Developing Guidelines
