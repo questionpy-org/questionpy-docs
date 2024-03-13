@@ -9,12 +9,9 @@ python = "^3.10"
 mkdocs = "^1.5.3"
 mkdocstrings = {extras = ["python"], version = "^0.24.1"}
 mkdocs-material = "^9.5.13"
-mkdocs-awesome-pages-plugin = "^2.9.2"
 mkdocs-monorepo-plugin = "^1.1.0"
 mkdocs-redirects = "^1.2.1"
 mkdocs-devbuild-plugin = {path = "./mkdocs-devbuild-plugin"}
-
-[tool.poetry.dev-dependencies]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
