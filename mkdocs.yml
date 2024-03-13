@@ -31,7 +31,24 @@ theme:
     - content.code.copy
   icon:
     repo: fontawesome/brands/github
+  logo: img/logo.svg
   favicon: img/favicon.ico
+  palette:
+    # light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - Home: index.md
@@ -40,7 +57,29 @@ nav:
       - getting_started/installation.md
       - getting_started/create_qtype.md
       - getting_started/faq.md
-  - ...
+  - Documentation:
+    - documentation/index.md
+    - documentation/formmodel.md
+    - documentation/identifier.md
+    - documentation/package_structure.md
+    - documentation/qtype.md
+    - documentation/resources.md
+    - LMS:
+      - Moodle:
+        - documentation/LMS/Moodle/index.md
+  - Reference:
+    - reference/index.md
+    - SDK:
+      - Questionpy: reference/SDK/questionpy.md
+      - QuestionPy SDK: reference/SDK/questionpy_sdk.md
+    - Common:
+      - Questionpy common: reference/common/questionpy_common.md
+    - Server:
+      - Api: reference/server/api.md
+      - Collector: reference/server/collector.md
+      - Factories: reference/server/factories.md
+      - Server: reference/server/server.md
+      - Worker: reference/server/worker.md
   - About:
       - about/index.md
       - about/license.md
