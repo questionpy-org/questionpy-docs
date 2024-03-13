@@ -1,12 +1,47 @@
 site_name: QuestionPy
-site_url: https://example.com
+site_url: https://questionpy.org/
 repo_url: https://github.com/questionpy-org/
 repo_name: questionpy-org
 
+nav:
+  - About:
+      - about/index.md
+      - about/project.md
+      - about/roadmap.md
+      - about/license.md
+  - Getting Started:
+      - getting_started/index.md
+      - getting_started/installation.md
+      - getting_started/create_qtype.md
+      - getting_started/faq.md
+  - Documentation:
+    - documentation/index.md
+    - documentation/formmodel.md
+    - documentation/identifier.md
+    - documentation/package_structure.md
+    - documentation/qtype.md
+    - documentation/resources.md
+    - LMS:
+      - Moodle:
+        - documentation/LMS/Moodle/index.md
+  - Reference:
+    - reference/index.md
+    - SDK: '!include ./questionpy-sdk/mkdocs.yml'
+    - Common: '!include ./questionpy-common/mkdocs.yml'
+    - Server: '!include ./questionpy-server/mkdocs.yml'
+  - Contribute:
+    - contribute/index.md
+    - contribute/translation.md
+    - contribute/documentation.md
+    - contribute/discussion.md
+    - contribute/development.md
 
 plugins:
   - devbuild: # need to run before `monorepo`
       enabled: !ENV MKDOCS_DEV
+  - redirects:
+      redirect_maps:
+        'index.md': about/index.md
   - search
   - monorepo
   - mkdocstrings:
@@ -47,42 +82,11 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 
+markdown_extensions:
+  toc:
+    permalink: true
+
 extra_css:
   - stylesheets/extra.css
-
-nav:
-  - Home: index.md
-  - Getting Started:
-      - getting_started/index.md
-      - getting_started/installation.md
-      - getting_started/create_qtype.md
-      - getting_started/faq.md
-  - Documentation:
-    - documentation/index.md
-    - documentation/formmodel.md
-    - documentation/identifier.md
-    - documentation/package_structure.md
-    - documentation/qtype.md
-    - documentation/resources.md
-    - LMS:
-      - Moodle:
-        - documentation/LMS/Moodle/index.md
-  - Reference:
-    - reference/index.md
-    - SDK:
-      - Questionpy: reference/SDK/questionpy.md
-      - QuestionPy SDK: reference/SDK/questionpy_sdk.md
-    - Common:
-      - Questionpy common: reference/common/questionpy_common.md
-    - Server:
-      - Api: reference/server/api.md
-      - Collector: reference/server/collector.md
-      - Factories: reference/server/factories.md
-      - Server: reference/server/server.md
-      - Worker: reference/server/worker.md
-  - About:
-      - about/index.md
-      - about/license.md
-      - about/roadmap.md
 
 # TODO: In the future Versioning could become relevant (see https://squidfunk.github.io/mkdocs-material/setup/setting-up-versioning/)
