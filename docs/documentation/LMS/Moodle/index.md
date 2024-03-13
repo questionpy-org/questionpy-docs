@@ -30,7 +30,7 @@ For more information, see [Installing manually at the server - MoodleDocs](https
 
 To edit the plugin settings, navigate to _Site Administration > Plugins > Question types > QuestionPy_.
 
-<img style="box-shadow: 2px 2px 2px 2px grey;" src="admin_settings.png">
+![Admin settings](admin_settings.png)
 
 ## Licensing
 
