@@ -46,8 +46,12 @@ plugins:
   - monorepo
   - mkdocstrings:
       default_handler: python
+      enable_inventory: true
       handlers:
         python:
+          import:
+            - https://docs.python.org/3/objects.inv
+            - https://docs.pydantic.dev/latest/objects.inv
           paths:
             - questionpy-common
             - questionpy-sdk
