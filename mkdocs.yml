@@ -90,8 +90,11 @@ theme:
         name: Switch to light mode
 
 markdown_extensions:
-  toc:
-    permalink: true
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - toc:
+      permalink: true
 
 extra_css:
   - stylesheets/extra.css
