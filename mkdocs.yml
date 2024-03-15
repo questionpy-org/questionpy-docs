@@ -1,44 +1,102 @@
 site_name: QuestionPy
-site_url: https://example.com
+site_url: https://questionpy.org/
 repo_url: https://github.com/questionpy-org/
 repo_name: questionpy-org
 
-
-plugins:
-  - awesome-pages # Navigation Customization
-  - search
-  - mkdocstrings:
-      default_handler: python
-      handlers:
-        python:
-          paths:
-            [questionpy-server, questionpy-sdk, questionpy-common]
-          options:
-            show_root_heading: true
-            docstring_style: google
-
-theme:
-#  name: readthedocs
-  name: material # material specific settings
-  features:
-    - navigation.indexes
-    - navigation.tabs
-    - content.code.copy
-  icon:
-    repo: fontawesome/brands/github
-  favicon: img/favicon.ico
-
 nav:
-  - Home: index.md
+  - About:
+      - about/index.md
+      - about/project.md
+      - about/roadmap.md
+      - about/license.md
   - Getting Started:
       - getting_started/index.md
       - getting_started/installation.md
       - getting_started/create_qtype.md
       - getting_started/faq.md
-  - ...
-  - About:
-      - about/index.md
-      - about/license.md
-      - about/roadmap.md
+  - Documentation:
+    - documentation/index.md
+    - documentation/formmodel.md
+    - documentation/identifier.md
+    - documentation/package_structure.md
+    - documentation/qtype.md
+    - documentation/resources.md
+    - LMS:
+      - Moodle:
+        - documentation/LMS/Moodle/index.md
+  - Reference:
+    - reference/index.md
+    - SDK: '!include ./questionpy-sdk/mkdocs.yml'
+    - questionpy_common: '!include ./questionpy-common/mkdocs.yml'
+    - questionpy_server: '!include ./questionpy-server/mkdocs.yml'
+  - Contribute:
+    - contribute/index.md
+    - contribute/translation.md
+    - contribute/documentation.md
+    - contribute/discussion.md
+    - contribute/development.md
+
+plugins:
+  - devbuild: # need to run before `monorepo`
+      enabled: !ENV MKDOCS_DEV
+  - redirects:
+      redirect_maps:
+        'index.md': about/index.md
+  - search
+  - monorepo
+  - mkdocstrings:
+      default_handler: python
+      enable_inventory: true
+      handlers:
+        python:
+          import:
+            - https://docs.python.org/3/objects.inv
+            - https://docs.pydantic.dev/latest/objects.inv
+          paths:
+            - questionpy-common
+            - questionpy-sdk
+            - questionpy-server
+          options:
+            docstring_style: google
+            group_by_category: true
+            heading_level: 1
+            show_category_heading: true
+            show_root_heading: true
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.indexes
+    - navigation.instant
+    - navigation.tabs
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+  logo: img/logo.svg
+  favicon: img/favicon.ico
+  palette:
+    # light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+
+extra_css:
+  - stylesheets/extra.css
 
 # TODO: In the future Versioning could become relevant (see https://squidfunk.github.io/mkdocs-material/setup/setting-up-versioning/)
