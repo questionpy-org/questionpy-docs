@@ -15,7 +15,7 @@ questionpy-sdk create my_qtype
 This will create the **my_qtype** directory in your current directory. 
 
 When choosing a name for your project, make sure you follow the naming rules listed 
-[here](../reference/common/questionpy_common.md#questionpy_common.manifest.ensure_is_valid_name).
+[here](../reference/common/manifest.md#questionpy_common.manifest.ensure_is_valid_name).
 
 To learn more about the project structure see the Information listed in the 
 [Package Structure](../documentation/package_structure.md) Section.
