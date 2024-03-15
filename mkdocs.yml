@@ -27,8 +27,8 @@ nav:
   - Reference:
     - reference/index.md
     - SDK: '!include ./questionpy-sdk/mkdocs.yml'
-    - Common: '!include ./questionpy-common/mkdocs.yml'
-    - Server: '!include ./questionpy-server/mkdocs.yml'
+    - questionpy_common: '!include ./questionpy-common/mkdocs.yml'
+    - questionpy_server: '!include ./questionpy-server/mkdocs.yml'
   - Contribute:
     - contribute/index.md
     - contribute/translation.md
@@ -57,8 +57,11 @@ plugins:
             - questionpy-sdk
             - questionpy-server
           options:
-            show_root_heading: true
             docstring_style: google
+            group_by_category: true
+            heading_level: 1
+            show_category_heading: true
+            show_root_heading: true
 
 theme:
   name: material
