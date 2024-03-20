@@ -5,7 +5,7 @@ description = "QuestionPy documentation"
 authors = ["Technische Universität Berlin, innoCampus <info@isis.tu-berlin.de>"]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.11"
 mkdocs = "^1.5.3"
 mkdocstrings = {extras = ["python"], version = "^0.24.1"}
 mkdocs-material = "^9.5.13"
