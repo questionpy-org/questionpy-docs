@@ -5,23 +5,28 @@ repo_name: questionpy-org
 
 
 plugins:
-  - awesome-pages # Navigation Customization
+  - devbuild: # need to run before `monorepo`
+      enabled: !ENV MKDOCS_DEV
   - search
+  - monorepo
   - mkdocstrings:
       default_handler: python
       handlers:
         python:
           paths:
-            [questionpy-server, questionpy-sdk, questionpy-common]
+            - questionpy-common
+            - questionpy-sdk
+            - questionpy-server
           options:
             show_root_heading: true
             docstring_style: google
 
 theme:
-#  name: readthedocs
-  name: material # material specific settings
+  name: material
+  language: en
   features:
     - navigation.indexes
+    - navigation.instant
     - navigation.tabs
     - content.code.copy
   icon:
