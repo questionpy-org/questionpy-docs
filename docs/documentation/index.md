@@ -1,6 +1,9 @@
-# Documentation
+# Writing QuestionPy packages
 
-Everything you need to know about QuestionPy.
+The following sections will guide you through the process of authoring QuestionPy packages.
 
-## Structure
+!!! note
 
+    Make sure, you have Python and the QuestionPy SDK installed. See [Installation] for details.
+
+  [Installation]: ../getting_started/installation.md
