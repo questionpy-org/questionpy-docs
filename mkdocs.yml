@@ -16,11 +16,13 @@ nav:
       - getting_started/faq.md
   - Documentation:
     - documentation/index.md
+    - documentation/package_structure.md
+    - documentation/configuration.md
     - documentation/formmodel.md
     - documentation/identifier.md
-    - documentation/package_structure.md
     - documentation/qtype.md
     - documentation/resources.md
+    - documentation/building.md
     - LMS:
       - Moodle:
         - documentation/LMS/Moodle/index.md
@@ -90,9 +92,20 @@ theme:
         name: Switch to light mode
 
 markdown_extensions:
+  - abbr
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight
   - pymdownx.inlinehilite
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - toc:
       permalink: true
 

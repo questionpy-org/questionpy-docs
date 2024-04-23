@@ -49,6 +49,10 @@
   color: var(--md-default-fg-color);
 }
 
+.md-typeset figure {
+  width: auto;
+}
+
 .md-typeset img {
   border-width: 1px;
   border-style: solid;
