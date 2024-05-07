@@ -1,0 +1,28 @@
+name: ci
+on:
+  push:
+    branches:
+      - dev
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+      - name: Install poetry
+        run: pip install --no-input "poetry>=1.1.14,<2.0.0"
+      - uses: actions/setup-python@v5
+        with:
+          cache: poetry
+          python-version-file: pyproject.toml
+      - name: Install dependencies
+        run: poetry install --no-root --no-interaction
+      - name: Deploy
+        run: poetry run mkdocs gh-deploy --force
