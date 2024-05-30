@@ -16,10 +16,10 @@ $ questionpy-sdk package SOURCE_DIRECTORY
     The `.qpy` file follows this default pattern: `NAMESPACE-SHORTNAME-VERSION.qpy`, like
     `my_namespace-my_project-0.1.0.qpy`.
 
-## Source backup
+## Source copy
 
-QuestionPy will automatically back up the source code by storing a copy in the `.qpy` package. This feature allows you
-to restore the complete source from a `.qpy` package whenever needed.
+QuestionPy will automatically copy the package source code into the `.qpy` file, enabling complete source restoration
+from the .qpy package whenever needed.
 
 <figure markdown="span">
 ```mermaid
