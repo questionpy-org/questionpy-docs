@@ -26,10 +26,7 @@ nav:
     - LMS:
       - Moodle:
         - documentation/LMS/Moodle/index.md
-  - Reference:
-    - reference/index.md
-    - SDK: '!include ./questionpy-sdk/mkdocs.yml'
-    - questionpy_server: '!include ./questionpy-server/mkdocs.yml'
+  - Reference: '!include ./questionpy-sdk/mkdocs.yml'
   - Contribute:
     - contribute/index.md
     - contribute/translation.md
@@ -62,6 +59,8 @@ plugins:
             heading_level: 1
             show_category_heading: true
             show_root_heading: true
+            preload_modules:
+              - questionpy_common
 
 theme:
   name: material
