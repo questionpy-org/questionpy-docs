@@ -48,7 +48,7 @@ class DevBuildPlugin(BasePlugin[DevBuildPluginConfig]):
     @staticmethod
     def _ensure_symlinks():
         docs_path = Path(__file__).parent / ".." / ".."
-        for repo in ("common", "sdk", "server"):
+        for repo in ("sdk", "server"):
             dst = docs_path / f"questionpy-{repo}-dev"
             target = Path("..") / repo
             with suppress(FileExistsError):
