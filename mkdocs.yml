@@ -29,7 +29,6 @@ nav:
   - Reference:
     - reference/index.md
     - SDK: '!include ./questionpy-sdk/mkdocs.yml'
-    - questionpy_common: '!include ./questionpy-common/mkdocs.yml'
     - questionpy_server: '!include ./questionpy-server/mkdocs.yml'
   - Contribute:
     - contribute/index.md
@@ -55,7 +54,6 @@ plugins:
             - https://docs.python.org/3/objects.inv
             - https://docs.pydantic.dev/latest/objects.inv
           paths:
-            - questionpy-common
             - questionpy-sdk
             - questionpy-server
           options:

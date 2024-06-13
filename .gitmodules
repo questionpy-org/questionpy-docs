@@ -4,6 +4,3 @@
 [submodule "questionpy-sdk"]
 	path = questionpy-sdk
 	url = https://github.com/questionpy-org/questionpy-sdk
-[submodule "questionpy-common"]
-	path = questionpy-common
-	url = https://github.com/questionpy-org/questionpy-common
