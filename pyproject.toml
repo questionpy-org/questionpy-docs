@@ -6,9 +6,9 @@ authors = ["Technische Universität Berlin, innoCampus <info@isis.tu-berlin.de>"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-mkdocs = "^1.5.3"
-mkdocstrings = {extras = ["python"], version = "^0.24.1"}
-mkdocs-material = "^9.5.13"
+mkdocs = "^1.6.0"
+mkdocstrings = {extras = ["python"], version = "^0.25.1"}
+mkdocs-material = "^9.5.26"
 mkdocs-monorepo-plugin = "^1.1.0"
 mkdocs-redirects = "^1.2.1"
 mkdocs-devbuild-plugin = {path = "./mkdocs-devbuild-plugin"}
