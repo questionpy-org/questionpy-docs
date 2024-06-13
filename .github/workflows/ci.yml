@@ -23,6 +23,6 @@ jobs:
           cache: poetry
           python-version-file: pyproject.toml
       - name: Install dependencies
-        run: poetry install --no-root --no-interaction
+        run: poetry install --no-interaction
       - name: Deploy
         run: poetry run mkdocs gh-deploy --force

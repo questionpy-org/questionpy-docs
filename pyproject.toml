@@ -3,6 +3,7 @@ name = "questionpy-docs"
 version = "0.1.0"
 description = "QuestionPy documentation"
 authors = ["Technische Universität Berlin, innoCampus <info@isis.tu-berlin.de>"]
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.11"
