@@ -121,7 +121,62 @@ QuestionPy packages can be of type `QUESTIONTYPE` (default), `LIBRARY` or `QUEST
 
 ## `permissions`
 
-TODO
+A list of requested permissions. Valid permissions are:
+
+- `cpus`: The number of worker CPUs.
+- `memory`: The amount of memory available to the worker.
+- `request_timeout`: The maximum time for a single request.
+- `bootstrap_timeout`: The maximum time for bootstrapping the QuestionPy package.
+- `main_process_execution_modes`: TODO
+- [`lms_attributes`](#lms_attributes): A list of wanted attributes provided by the LMS.
+
+Except for [`lms_attributes`](#lms_attributes), the server must accept every permission; otherwise the QuestionPy
+package will be rejected.
+
+!!! info
+    A QuestionPy package can generally rely on a minimal set of resources. These default limits might rise with newer
+    server versions but will **never** drop.
+    
+    - `cpus`: 1
+    - `memory`: 200 MiB
+    - `request_timeout`: 10
+    - `bootstrap_timeout`: 4
+
+    The server might also override permissions. The effective permissions can be checked with
+    [`#!python get_qpy_environment().permissions`](/reference/questionpy/#questionpy.PackagePermissions).
+    
+
+### `lms_attributes`
+
+If the server does not explicitly allow a specific requested attribute, the attribute is ignored, but the QuestionPy
+package will **not** be rejected. The LMS may or may not provide any of the requested attributes. The provided
+attributes will be available through
+[`#!python get_qpy_environment().request_info.lms_provided_attributes`](/reference/questionpy/#questionpy.RequestInfo).
+
+Well-known attributes are:
+
+LMS:
+
+- `course_id`
+- `attempt_id`
+- `attempt_started_at`
+- `submission_at`
+- `lms_<x>_<y>` (where `<x>` is the LMS and `<y>` an identifier, e.g., `lms_moodle_component_name`)
+
+Group:
+
+- `group_id`
+- `group_name`
+
+User:
+
+- `user_id`
+- `login_identifier`
+- `email`
+- `display_name`
+- `person_first_name`
+- `person_last_name`
+- `profile_field_<x>` (where `<x>` is an identifier, e.g., `profile_field_age`)
 
 ## `requirements`
 
